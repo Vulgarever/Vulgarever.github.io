@@ -19,7 +19,7 @@
             .box {
                 width: 100%;
                 height: 100%;
-                padding: 20px;
+                padding: env(safe-area-inset-top);
             }
             .info {
                 margin-bottom: 10px;
@@ -51,6 +51,7 @@
         </div>
 
         <script>
+            console.log(document.querySelector('.box').style.padding)
             // 获取网页实际可用宽高信息的函数
             const updatePageSize = () => {
                 // 获取屏幕分辨率信息
